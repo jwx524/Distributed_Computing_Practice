@@ -8,11 +8,12 @@ public class EchoServer {
 		ServerSocket listenSocket = new ServerSocket(8189); 
 				
 		System.out.println("Server listening at 8189");
-		clientSocket = listenSocket.accept();
-		System.out.println("Accepted connection from client");
+		while(true) {
+			clientSocket = listenSocket.accept();
+			System.out.println("Accepted connection from client");
 		
-		TCPThread t=new TCPThread(clientSocket);
-		t.start();
-		listenSocket.close();
+			TCPThread t=new TCPThread(clientSocket);
+			t.start();
+		}
 	 }
 }
