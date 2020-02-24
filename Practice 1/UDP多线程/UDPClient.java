@@ -1,8 +1,8 @@
+package UDP多线程;
 import java.net.*;
 import java.io.*;
-public class UDPClient_thread{
-	
-	public static void main(String[] args) {
+public class UDPClient{
+	public static void main(String args[]) {
 		// TODO 自动生成的方法存根
 		// args give message contents and server hostname
 	    DatagramSocket aSocket = null;

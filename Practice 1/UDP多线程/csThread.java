@@ -1,3 +1,4 @@
+package UDP多线程;
 import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
@@ -16,12 +17,9 @@ public class csThread extends Thread{
 			DatagramPacket reply = new DatagramPacket(request.getData(),
 			request.getLength(), request.getAddress(), request.getPort());
 			aSocket.send(reply);
-		} catch (SocketException e){
-			System.out.println("Socket: " + e.getMessage());
 		} catch (IOException e) {
-			System.out.println("IO: " + e.getMessage());
-		} finally {
-			if (aSocket != null) aSocket.close();
+			// TODO 自动生成的 catch 块
+			e.printStackTrace();
 		}
 	}
 }
