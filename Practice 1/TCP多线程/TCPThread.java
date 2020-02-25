@@ -36,10 +36,6 @@ public class TCPThread extends Thread{
 			e.printStackTrace();
 		}finally {
 			try {
-				if(inStream!=null) inStream.close();
-				if(outStream!=null) outStream.close();
-				if(in!=null) in.close();
-				if(out!=null) out.close();
 				if(clientSocket!=null) clientSocket.close();
 			} catch (IOException e) {
 				// TODO 自动生成的 catch 块
