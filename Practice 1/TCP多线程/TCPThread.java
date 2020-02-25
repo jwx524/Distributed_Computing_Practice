@@ -14,12 +14,15 @@ public class TCPThread extends Thread{
 		clientSocket=s;
 	}
 	public void run() {
-		
+		InputStream inStream = null;
+		OutputStream outStream = null;
+		BufferedReader in = null;
+		PrintWriter out = null;
 		try {
-			InputStream inStream = clientSocket.getInputStream();
-			OutputStream outStream = clientSocket.getOutputStream();
-			BufferedReader in = new BufferedReader(new InputStreamReader(inStream));
-			PrintWriter out = new PrintWriter(outStream);
+			inStream = clientSocket.getInputStream();
+			outStream = clientSocket.getOutputStream();
+			in = new BufferedReader(new InputStreamReader(inStream));
+			out = new PrintWriter(outStream);
 			
 			String line = null;
 			while((line=in.readLine())!=null) {
@@ -31,6 +34,17 @@ public class TCPThread extends Thread{
 		} catch (IOException e) {
 			// TODO 自动生成的 catch 块
 			e.printStackTrace();
+		}finally {
+			try {
+				if(inStream!=null) inStream.close();
+				if(outStream!=null) outStream.close();
+				if(in!=null) in.close();
+				if(out!=null) out.close();
+				if(clientSocket!=null) clientSocket.close();
+			} catch (IOException e) {
+				// TODO 自动生成的 catch 块
+				e.printStackTrace();
+			}
 		}
 		
 	}
