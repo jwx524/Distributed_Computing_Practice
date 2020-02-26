@@ -6,14 +6,13 @@ import java.net.SocketException;
 
 public class csThread extends Thread{
 	DatagramSocket aSocket =null;
-	byte[] buffer = new byte[1000];
-	csThread(DatagramSocket ds) throws IOException{
+	DatagramPacket request = null;
+	csThread(DatagramSocket ds,DatagramPacket r) throws IOException{
 		aSocket = ds;
+		request=r;
 	}
 	public void run() {
 		try {
-			DatagramPacket request = new DatagramPacket(buffer, buffer.length);
-			aSocket.receive(request);
 			DatagramPacket reply = new DatagramPacket(request.getData(),
 			request.getLength(), request.getAddress(), request.getPort());
 			aSocket.send(reply);
