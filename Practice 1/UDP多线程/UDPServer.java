@@ -12,8 +12,11 @@ public class UDPServer{
 		DatagramSocket aSocket=null;
 		try{
 			aSocket = new DatagramSocket(serverport);
+			byte[] buffer = new byte[1000];
 			while(true){
-				csThread t=new csThread(aSocket);
+				DatagramPacket request = new DatagramPacket(buffer, buffer.length);
+				aSocket.receive(request);
+				csThread t=new csThread(aSocket,request);
 				t.start();
 			}
 		} catch (SocketException e){
