@@ -45,7 +45,7 @@ public class wthread extends Thread{
 				u.request.getAddress(), u.request.getPort());
 		unit u2=new unit(u.aSocket,reply);
 		try {
-			receive.in.put(u2);
+			sending.out.put(u2);
 		} catch (InterruptedException e) {
 			// TODO 自动生成的 catch 块
 			e.printStackTrace();
