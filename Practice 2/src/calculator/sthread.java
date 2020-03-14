@@ -9,15 +9,17 @@ public class sthread extends Thread{
 	DatagramPacket request = null;
 	sthread() throws InterruptedException{
 		unit u=null;
-		u=sending.out.take();
+		u=server.out.take();
 		aSocket = u.aSocket;
 		request=u.request;
+		System.out.println("dequeue");
 	}
 	public void run() {
 		DatagramPacket reply = new DatagramPacket(request.getData(),
 		request.getLength(), request.getAddress(), request.getPort());
 		try {
 			aSocket.send(reply);
+			System.out.println("sent");
 		} catch (IOException e) {
 			// TODO 自动生成的 catch 块
 			e.printStackTrace();

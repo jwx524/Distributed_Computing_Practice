@@ -18,7 +18,8 @@ public class rthread extends Thread{
 		byte[] m=request.getData();*/
 		unit u=new unit(aSocket,request);
 		try {
-			receive.in.put(u);
+			server.in.put(u);
+			System.out.println("enqueue");
 		} catch (InterruptedException e) {
 			// TODO 自动生成的 catch 块
 			e.printStackTrace();

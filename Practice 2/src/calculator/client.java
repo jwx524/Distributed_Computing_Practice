@@ -15,6 +15,7 @@ public class client {
 		DatagramSocket aSocket = null;
 		try {
 			aSocket = new DatagramSocket();
+			System.out.println("请输入：");
 			BufferedReader stdIn = new BufferedReader(new InputStreamReader(System.in));
 			String oprt=stdIn.readLine();
 			String num=stdIn.readLine();	
@@ -30,6 +31,7 @@ public class client {
 			int serverPort = 6789;
 			DatagramPacket request = new DatagramPacket(m, m.length, aHost, serverPort);
 			aSocket.send(request);
+			System.out.println("数据包已发送。");
 			byte[] buffer = new byte[1000];
 			DatagramPacket reply = new DatagramPacket(buffer, buffer.length);
 			aSocket.receive(reply);

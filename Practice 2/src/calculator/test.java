@@ -42,6 +42,7 @@ public class test {
 		n2=s2.substring(index+1,s2.length()-1);
 		System.out.println(n1);
 		System.out.println(n2);
+		System.out.println(s2.length());
 		int a = Integer.parseInt(n1);
 		int b = Integer.parseInt(n2);
 		int c=0;
