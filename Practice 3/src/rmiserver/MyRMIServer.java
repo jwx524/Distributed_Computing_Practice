@@ -1,4 +1,4 @@
-package rmiserver;
+//package rmiserver;
 
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;

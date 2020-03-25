@@ -1,6 +1,8 @@
-package def;
+import java.io.Serializable;
 
-public class book {
+//package def;
+
+public class book implements Serializable{
 	int id=-1;
 	String name=null;
 	public book() {}	

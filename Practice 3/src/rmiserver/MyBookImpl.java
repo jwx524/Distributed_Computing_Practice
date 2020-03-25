@@ -1,9 +1,10 @@
-package rmiserver;
+//package rmiserver;
 
 import java.rmi.RemoteException;
 
-import def.book;
-import def.booklist;
+
+//import def.book;
+//import def.booklist;
 
 public class MyBookImpl implements MyBook{
 	public boolean add(book b) throws RemoteException {

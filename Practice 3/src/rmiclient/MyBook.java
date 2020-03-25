@@ -1,10 +1,9 @@
-package rmiclient;
+//package rmiclient;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 
-import def.book;
-import def.booklist;
+
 
 public interface MyBook extends Remote{
 	boolean add(book b) throws RemoteException;

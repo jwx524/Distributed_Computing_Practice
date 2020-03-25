@@ -1,6 +1,6 @@
-package rmiserver;
+//package rmiserver;
 
-import def.booklist;
+//import def.booklist;
 
 public class List {
 	public static booklist List=new booklist();

@@ -1,10 +1,9 @@
-package rmiclient;
+//package rmiclient;
 
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 
-import def.book;
-import def.booklist;
+
 
 public class MyRMIClient {
 
