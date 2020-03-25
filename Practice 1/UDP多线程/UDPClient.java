@@ -9,6 +9,7 @@ public class UDPClient{
 		try {
 			aSocket = new DatagramSocket();
 			byte[] m = args[0].getBytes();
+	//		System.out.println(m);
 			InetAddress aHost = InetAddress.getByName("127.0.0.1");
 			int serverPort = 6789;
 			DatagramPacket request = new DatagramPacket(m, m.length, aHost, serverPort);

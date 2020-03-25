@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry excluding="多线程示例程序/|UDP通信示例程序/|TCP通信示例程序/" kind="src" path=""/>
+	<classpathentry kind="src" path="多线程示例程序"/>
+	<classpathentry kind="src" path="TCP通信示例程序"/>
+	<classpathentry kind="src" path="UDP通信示例程序"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
