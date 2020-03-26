@@ -1,6 +1,6 @@
-package rmiserver;
-import def.book;
-import def.booklist;
+//package rmiserver;
+//import def.book;
+//import def.booklist;
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 

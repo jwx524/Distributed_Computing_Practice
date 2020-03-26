@@ -8,7 +8,7 @@ class MyThread extends Thread{
     public void run(){
         for(int i=0;i<ticket;i++){ 
             if(ticket>0){
-                System.out.println(this.getName()+" sold ticket"+ ticket--);
+                System.out.println(this.getName()+" sold ticket"+ i);
             }
         }
     } 
