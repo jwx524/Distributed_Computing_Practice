@@ -14,16 +14,17 @@ public class MyBookImpl implements MyBook{
 			temp=List.List.list.get(i);
 			if(temp.getId()==(b.getId())) {
 				p=1;
+				b.setName(temp.getName());
 				break;
 			}
 		}
 		if(p==0) {
 			List.List.list.add(b);
-			System.out.println(b.getId()+"已添加");
+			System.out.println(b.getId()+":"+b.getName()+" 已添加");
 			return true;
 		}
 		else {
-			System.out.println(b.getId()+"已存在");
+			System.out.println(b.getId()+":"+b.getName()+" 已存在");
 			return false;
 		}
 	}
@@ -32,7 +33,7 @@ public class MyBookImpl implements MyBook{
 		for(int i=0;i<List.List.list.size();i++) {
 			temp=List.List.list.get(i);
 			if(temp.getId()==bookId) {
-				System.out.println(bookId+"已找到");
+				System.out.println(bookId+":"+temp.getName()+" 已找到");
 				return temp;
 			}
 		}
@@ -57,7 +58,7 @@ public class MyBookImpl implements MyBook{
 			temp=List.List.list.get(i);
 			if(temp.getId()==bookId) {
 				List.List.list.remove(i);
-				System.out.println(bookId+"已删除");
+				System.out.println(bookId+":"+temp.getName()+" 已删除");
 				return true;
 			}
 		}
