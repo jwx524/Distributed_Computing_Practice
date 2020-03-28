@@ -1,0 +1,4 @@
+wsimport -keep -p wsproxy http://ws.webxml.com.cn/webservices/qqOnlineWebService.asmx?wsdl
+
+javac *.java
+java qqOnlineInfoClient qq号
