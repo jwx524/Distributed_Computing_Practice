@@ -1,0 +1,19 @@
+setcp
+javac WordCount1.java
+jar cvf mrtest1.jar *.class
+hadoop fs -mkdir /input1
+hadoop fs -put ./学生成绩信息表.txt /input1
+hadoop jar ./mrtest1.jar WordCount /input1 /output1
+hadoop fs -cat /output1/part-r-00000
+del *.class
+javac WordCount2.java
+jar cvf mrtest2.jar *.class
+hadoop jar ./mrtest2.jar WordCount /input1 /output2
+hadoop fs -cat /output2/part-r-00000
+del *.class
+javac WordCount3.java
+jar cvf mrtest3.jar *.class
+hadoop fs -mkdir /input3
+hadoop fs -put ./child-parent关系表.txt /input3
+hadoop jar ./mrtest3.jar WordCount /input3 /output3
+hadoop fs -cat /output3/part-r-00000
