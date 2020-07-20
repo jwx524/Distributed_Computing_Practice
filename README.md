@@ -12,4 +12,4 @@
 
 * [Practice 6](https://github.com/jwx524/Distributed_Computing_Practice/tree/master/Practice%206/%E6%BA%90%E4%BB%A3%E7%A0%81)
 
-* [Practice 7]()
+* [Practice 7](https://github.com/jwx524/Distributed_Computing_Practice/tree/master/Practice%207)
